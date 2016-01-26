@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/courington/fun_angular#readme",
   "devDependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2"
+  },
+  "dependencies": {
     "angular": "^1.4.9"
   }
 }
