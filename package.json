@@ -1,0 +1,25 @@
+{
+  "name": "fun_angular",
+  "version": "0.0.1",
+  "description": "exploring angular",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo 'echo'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/courington/fun_angular.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "@courington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/courington/fun_angular/issues"
+  },
+  "homepage": "https://github.com/courington/fun_angular#readme",
+  "devDependencies": {
+    "angular": "^1.4.9"
+  }
+}
