@@ -4,7 +4,9 @@
   "description": "exploring angular",
   "main": "app.js",
   "scripts": {
-    "test": "echo 'echo'"
+    "test": "echo 'no tests!!!'",
+    "start": "node app.js",
+    "watch": "concurrent \"npm start\" \"watchify src/app.js -o public/bundle.js --debug --verbose --poll\""
   },
   "repository": {
     "type": "git",
@@ -20,8 +22,11 @@
   },
   "homepage": "https://github.com/courington/fun_angular#readme",
   "devDependencies": {
+    "babelify": "^7.2.0",
+    "concurrently": "^1.0.0",
     "connect": "^3.4.1",
-    "serve-static": "^1.10.2"
+    "serve-static": "^1.10.2",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
     "angular": "^1.4.9"
