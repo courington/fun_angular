@@ -6,31 +6,31 @@
         <title>Angular</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+        <link rel="stylesheet" type="text/css" href="public/bundle.css">
     </head>
     <body class="loading">
-        <h1>Hello world!</h1>
+        <main>
+            
+            <!-- NG Template -->
+            <div ng-app="c_invoice" ng-controller="InvoiceController as invoice">
+                <b>Invoice:</b>
+                <div>
+                    Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
+                </div>
+                <div>
+                    Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+                    <select ng-model="invoice.inCurr">
+                        <option ng-repeat="c in invoice.currencies">{{c}}</option>
+                    </select>
+                </div>
+                <div>
+                    <b>Total:</b>
+                    <span ng-repeat="c in invoice.currencies">{{invoice.total(c) | currency:c}}</span>
+                    <button class="btn" ng-click="invoice.pay()">Pay</button>
+                </div>
+            </div>
 
-        <!-- NG Template -->
-        <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
-            <b>Invoice:</b>
-            <div>
-                Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
-            </div>
-            <div>
-                Costs: <input type="number" min="0" ng-model="invoice.cost" required >
-                <select ng-model="invoice.inCurr">
-                    <option ng-repeat="c in invoice.currencies">{{c}}</option>
-                </select>
-            </div>
-            <div>
-                <b>Total:</b>
-                <span ng-repeat="c in invoice.currencies">{{invoice.total(c) | currency:c}}</span>
-                <button class="btn" ng-click="invoice.pay()">Pay</button>
-            </div>
-        </div>
-
-        <!-- #SCRIPTS -->
+        </main>
         <script src="public/bundle.js" type="text/javascript"></script>
     </body>
 </html>

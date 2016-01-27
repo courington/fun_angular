@@ -19,7 +19,7 @@ import * as s_Finance from "../../src/services/s_finance";
 * NG Controller
 * Angular module doesn't require ES6 export style (?)
 */
-angular.module('invoice3', ['s_finance'])
+angular.module('c_invoice', ['s_finance'])
 .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
   this.qty = 1;
   this.cost = 2;
