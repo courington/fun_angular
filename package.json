@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/courington/fun_angular#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "concurrently": "^1.0.0",
     "connect": "^3.4.1",
@@ -30,5 +31,17 @@
   },
   "dependencies": {
     "angular": "^1.4.9"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
   }
 }

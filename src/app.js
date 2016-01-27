@@ -1,6 +1,6 @@
-var angular = require('angular');
+"use strict";
 
-console.warn(angular);
+const angular = require('angular');
 
 /**
 // NG Service
