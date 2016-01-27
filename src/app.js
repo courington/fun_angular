@@ -1,9 +1,16 @@
 "use strict";
 
-const angular = require('angular');
+// const angular = require('angular');
+import * as angular from "../node_modules/angular"
 
 /**
-// NG Service
+ * es6 modules
+ */
+// import * as math from "../src/math";
+// alert("2π = " + math.sum(math.pi, math.pi));
+
+/**
+* NG Service
 */
 angular.module('finance3', [])
 .factory('currencyConverter', ['$http', function($http) {
@@ -40,7 +47,7 @@ angular.module('finance3', [])
 }]);
 
 /**
-// NG Controller
+* NG Controller
 */
 angular.module('invoice3', ['finance3'])
 .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
